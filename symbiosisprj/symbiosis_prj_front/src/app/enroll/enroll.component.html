@@ -1,0 +1,27 @@
+<h1 class="text-center">
+    Enroll Here
+</h1>
+<form (submit)="submitdata()">
+    <div class=form-group>
+        <label for=nm>Course Id:</label>
+        <input type=text name=cid id=cid class=form-control placeholder="Enter Course id here" [(ngModel)]="en.courseid"> 
+        </div>
+        <div class=form-group>
+        <label for=em>College Name:</label>
+        <input type=text class=form-control name=cnm id=cnm placeholder="Enter college name here" [(ngModel)]="en.collegename"> 
+        </div>
+        <div class=form-group>
+        <label for=ps>Qualification:</label>
+        <input class=form-control type=text name=qu id=qu placeholder="Enter Qualification here" [(ngModel)]="en.qualification"> 
+        </div>
+        <div class=form-group>
+            <label for=ps>Batch type:</label>
+            <select class=form-control name=bt id=bt [(ngModel)]="en.batchtype"> 
+                <option>--Select batch type</option>
+                <option>Daily</option>
+                <option>Weekend</option>
+                </select>
+            </div>
+            
+            <input type=submit class="btn btn-primary" value="Submit"> 
+</form>

@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Course id</th>
+            <th>Course name</th>
+            <th>Duration</th>
+            <th>Fees</th>
+            <th>Image</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of courses">
+            <td>{{c.id}}</td>
+            <td>{{c.coursename}}</td>
+            <td>{{c.duration}}</td>
+            <td>{{c.fees}}</td>
+            <td><img src="http://localhost:8080/project/downloadFile/{{c.courseImages[0].name}}"></td>
+            <td><button type="button" (click)="deletecourse(c.id);showdetails(c)" class="btn btn-danger btn-sm">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

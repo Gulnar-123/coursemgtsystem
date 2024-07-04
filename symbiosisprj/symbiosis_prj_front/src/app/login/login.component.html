@@ -1,0 +1,24 @@
+<h3>Login Here</h3>
+<div [hidden]="submitted && !invalid" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+   
+   
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="register.emailid" name="emailid">
+    </div>
+    <div class="form-group">
+        <label for="name">Password</label>
+        <input type="password" class="form-control" id="password" required [(ngModel)]="register.password" name="password">
+      </div>
+  
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!invalid">
+ <font color="red"> <h4>Wrong emailid or password!</h4></font>
+  <h4>{{ errordata }}</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

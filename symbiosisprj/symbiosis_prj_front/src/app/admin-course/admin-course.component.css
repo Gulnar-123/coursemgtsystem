@@ -1,0 +1,13 @@
+.pr-dv
+{
+    border: 1px solid #eee;
+}
+.close
+{
+    position: absolute;
+    top: -10;
+    right: -10;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
